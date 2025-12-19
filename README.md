@@ -195,9 +195,12 @@ Note the following values that will be needed to configure the node in n8n:
 
 #### For OAuth2 Authentication:
 1. Create a "Power BI OAuth2 API" credential with:
+   - **Authorization URL**: Replace `common` with your **Tenant ID** in the default URL or use `https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/authorize`  replacing `<TENANT_ID>` with with your actual Tenant ID
+   - **Access Token URL**: Replace `common` with your **Tenant ID** in the default URL or use `https://login.microsoftonline.com/<TENANT_ID>/oauth2/v2.0/token` replacing `<TENANT_ID>` with your actual Tenant ID
    - **Client ID**: The registered application ID
    - **Client Secret**: The generated client secret
    - **Scope**: Leave blank or use `https://analysis.windows.net/powerbi/api/.default`
+  
 
 #### For Bearer Token Authentication:
 1. Create a "Power BI API" credential with:
